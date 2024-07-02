@@ -9,7 +9,10 @@ const MenuPrivado = () => {
         <>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
                 <div className="container-fluid">
-                    <NavLink className="navbar-brand" aria-current="page" exact="true" to="/privado">eShop - LPE</NavLink>
+                    <NavLink className="navbar-brand d-flex align-items-center" aria-current="page" exact="true" to="/privado">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2231/2231727.png" alt="Logo e-Lib" style={{ height: '32px', marginRight: '10px' }} />
+                        <b>e-Lib</b>
+                    </NavLink>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
@@ -21,7 +24,7 @@ const MenuPrivado = () => {
                             {usuario &&
                                 <li className="nav-item dropdown">
                                     <a className="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Manutenções
+                                        Bibliotecas
                                     </a>
                                     <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                                         <li><NavLink className="dropdown-item" exact="true" to="livros">Livros</NavLink></li>
@@ -30,22 +33,21 @@ const MenuPrivado = () => {
                                     </ul>
                                 </li>
                             }
+                        </ul>
+                        <ul className="navbar-nav mb-2 mb-lg-0">
                             <li className="nav-item dropdown">
                                 <a className="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    { usuario ? "Usuário: " + usuario.nome : "Usuário"}
+                                    {usuario ? "Usuário: " + usuario.nome : "Usuário"}
                                 </a>
                                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <li>
                                         {
                                             usuario ?
-                                            <NavLink className="dropdown-item" exact="true"
-                                            onClick={()=> logout()}
-                                             to="/">Logout</NavLink>
-                                            :
-                                            <NavLink className="dropdown-item" exact="true" 
-                                            to="/login">Login</NavLink>
+                                                <NavLink className="dropdown-item" exact="true" onClick={() => logout()} to="/">Logout</NavLink>
+                                                :
+                                                <NavLink className="dropdown-item" exact="true" to="/login">Login</NavLink>
                                         }
-                                    </li>                                   
+                                    </li>
                                 </ul>
                             </li>
                         </ul>
