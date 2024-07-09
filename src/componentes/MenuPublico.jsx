@@ -8,7 +8,7 @@ const MenuPublico = () => {
                 <div className="container-fluid">
                     <NavLink className="navbar-brand d-flex align-items-center" aria-current="page" exact="true" to="/">
                         <img src="https://cdn-icons-png.flaticon.com/512/2231/2231727.png" alt="Logo e-Lib" style={{ height: '32px', marginRight: '10px' }} />
-                        e-Lib
+                        <b>e-Lib</b>
                     </NavLink>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
