@@ -59,10 +59,10 @@ function Form() {
                         <div className="modal-footer">
                             <button type="button" className="btn btn-secondary"
                                 data-bs-dismiss="modal">Fechar</button>
-                            <button type="submit"
+                            <button type="submit" data-bs-dismiss="modal"
                                 className="btn btn-success">
-                                Salvar
                                 <i className="bi bi-save"></i>
+                                Salvar
                             </button>
                         </div>
                     </form>
